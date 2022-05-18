@@ -12,6 +12,8 @@ const api = axios.create({
 async function getTrendingMoviesPreview() {
     const { data } = await api ("trending/movie/day");
   
+    trendingMoviesPreviewList.innerHTML="";
+    
     const movies = data.results;
     movies.forEach(movie => {
 
@@ -34,7 +36,8 @@ async function getTrendingMoviesPreview() {
 async function getCategoriesPreview() {
     const { data } = await api ("genre/movie/list");
 
-    
+    categoriesPreviewList.innerHTML="";
+
     const categories = data.genres;
     categories.forEach(category => {
 
