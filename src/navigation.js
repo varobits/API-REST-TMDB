@@ -66,6 +66,14 @@ function categoriesPages() {
   //likedMoviesSection.classList.add('inactive');
   genericSection.classList.remove('inactive');
   movieDetailSection.classList.add('inactive');
+
+  //obsteniendo caegry id del hash
+  const [_, categoryData] = location.hash.split("=");
+  const [categoryId, categoryName] = categoryData.split("-");
+  
+  headerCategoryTitle.innerHTML = categoryName;
+  
+  getMoviesByCategory(categoryId);
     
 }
 
