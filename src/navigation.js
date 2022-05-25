@@ -94,6 +94,11 @@ function moviesPages() {
   //likedMoviesSection.classList.add('inactive');
   genericSection.classList.add('inactive');
   movieDetailSection.classList.remove('inactive');
+
+  //obsteniendo id de la pelicula
+  const [_, movieId] = location.hash.split("=");
+  
+  getMovieById(movieId);
  
 }
 
@@ -136,6 +141,8 @@ function trendsPages() {
     genericSection.classList.remove('inactive');
     movieDetailSection.classList.add('inactive');
   
-    headerCategoryTitle.innerHTML = 'Tendencias';
+    headerCategoryTitle.innerHTML="Tendencias";
+    
+    getTrendingMovies();
    
 }
