@@ -1,5 +1,5 @@
 searchFormBtn.addEventListener("click", ()=>{
-    location.hash= "#search=";
+    location.hash= "#search="+searchFormInput.value;
 });
 
 trendingBtn.addEventListener("click", ()=>{
@@ -112,6 +112,11 @@ function serachPages() {
   //likedMoviesSection.classList.add('inactive');
   genericSection.classList.remove('inactive');
   movieDetailSection.classList.add('inactive');
+
+  //obsteniendo busqueda del hash
+  const [_, query] = location.hash.split("=");
+
+  getMoviesBySearch(query);
    
 }
 
