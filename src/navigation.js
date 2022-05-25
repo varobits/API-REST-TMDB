@@ -27,7 +27,9 @@ function navigator() {
         categoriesPages();
     } else {
         homePage();
-    }    
+    }  
+    
+    document.documentElement.scrollTop = 0;
 }
 
 function homePage() {
