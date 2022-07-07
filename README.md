@@ -1,3 +1,5 @@
 # API-REST-TMDB
 
-Consumo API REST con JavaScript.
+Aplicación sobre peliculas para practicar consumo API REST con JavaScript.
+
+V1 -> only mobile version
